@@ -1,0 +1,19 @@
+Database Name: strathcafe
+
+CREATE TABLE Users (
+    UserID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    AdmissionNumber INT(6) NOT NULL UNIQUE,
+    Gender VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    DateJoined VARCHAR(255) NOT NULL
+)
+
+CREATE TABLE Password_Resets (
+    ID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    Email VARCHAR(255) NOT NULL,
+    Token VARCHAR(255) NOT NULL UNIQUE,
+    TokenExpiration varchar(255) NOT NULL
+)
